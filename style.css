@@ -313,6 +313,7 @@ body {
 /* Target Inputs */
 .target-inputs {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
     margin-bottom: 25px;
