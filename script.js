@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const tradesContainer = document.getElementById('trades-container');
     const calculateBtn = document.getElementById('calculate-btn');
     const resultsContent = document.getElementById('results-content');
+    const clearInventoryBtn = document.getElementById('clear-inventory-btn');
+
     // Initialize Inventory Grid
     for (let i = 0; i < INVENTORY_SIZE; i++) {
         const slot = document.createElement('div');
@@ -69,6 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    if (clearInventoryBtn) {
+        clearInventoryBtn.addEventListener('click', () => {
+            for (let i = 0; i < INVENTORY_SIZE; i++) {
+                setSlotCandy(i, 0);
+            }
+        });
+    }
     
     // State for Trades: array of 4 trades, each has a 'give' array and 'get' array (storing candy types 1-5)
     let tradeStates = [

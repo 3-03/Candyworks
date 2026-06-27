@@ -61,6 +61,42 @@ body {
     margin-top: 5px;
 }
 
+.key-legend {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 15px;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.legend-key {
+    color: #ff5555;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.dash {
+    color: #555;
+}
+.legend-box {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--slot-border);
+    background: var(--slot-bg);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+}
+.legend-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 /* Panels */
 .main-content {
     display: flex;
@@ -103,8 +139,8 @@ body {
 .inventory-wrapper {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .inventory-cauldron {
@@ -159,6 +195,29 @@ body {
     object-fit: contain;
     filter: drop-shadow(0 2px 3px rgba(0,0,0,0.8));
     pointer-events: none;
+}
+
+/* Clear Button */
+.clear-btn {
+    background: rgba(255, 85, 85, 0.05);
+    border: 1px solid rgba(255, 85, 85, 0.4);
+    color: #ff5555;
+    padding: 10px 15px;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+.clear-btn:hover {
+    background: rgba(255, 85, 85, 0.15);
+    border-color: #ff5555;
+    box-shadow: 0 0 15px rgba(255, 85, 85, 0.4);
+    color: #fff;
 }
 
 /* Trades */
