@@ -388,3 +388,50 @@ body {
     color: #fff;
     text-shadow: 0 0 5px var(--gold);
 }
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .app-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .header-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .bottom-sections {
+        grid-template-columns: 1fr;
+    }
+    
+    .inventory-wrapper {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+    }
+    
+    .inventory-cauldron {
+        height: 100px;
+        transform: none;
+    }
+    
+    .inventory-grid {
+        grid-template-columns: repeat(10, 8.5vw);
+        gap: 1vw;
+        justify-content: center;
+    }
+    
+    .slot {
+        width: 8.5vw;
+        height: 8.5vw;
+    }
+    
+    .dota-panel {
+        padding: 15px;
+    }
+}
