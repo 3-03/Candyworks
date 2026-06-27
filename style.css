@@ -402,30 +402,54 @@ body {
     border-radius: 6px;
     padding: 8px;
     display: flex;
+    flex-direction: column;
     gap: 6px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.9);
     z-index: 1000;
 }
 .popup-candy {
-    width: 36px;
-    height: 36px;
-    background: rgba(0,0,0,0.2);
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0,0.3);
     border: 1px solid var(--slot-border);
     border-radius: 4px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
     transition: 0.1s;
 }
 .popup-candy:hover {
     border-color: var(--gold);
-    transform: scale(1.1);
     background: rgba(255,255,255,0.05);
 }
 .popup-candy img {
-    width: 80%;
-    height: 80%;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.popup-candy-row {
+    display: flex;
+    gap: 4px;
+    padding: 6px;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--slot-border);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.1s;
+    margin-bottom: 4px;
+}
+.popup-candy-row:last-child {
+    margin-bottom: 0;
+}
+.popup-candy-row:hover {
+    border-color: var(--gold);
+    background: rgba(255,255,255,0.05);
+}
+.popup-candy-row img {
+    width: 32px;
+    height: 32px;
     object-fit: contain;
 }
 
@@ -502,4 +526,66 @@ body {
     .dota-panel {
         padding: 15px;
     }
+}
+
+/* Custom Recipes */
+.custom-recipe-panel {
+    margin-top: 20px;
+}
+.custom-recipe-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+.custom-recipe-row {
+    display: flex;
+    align-items: center;
+    background: rgba(0,0,0,0.15);
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 450px;
+    justify-content: space-between;
+}
+.custom-recipe-block {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--slot-border);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.1s;
+    min-height: 48px;
+}
+.custom-recipe-block:hover {
+    border-color: var(--gold);
+    background: rgba(255,255,255,0.05);
+}
+.dropdown-icon {
+    color: var(--gold-dim);
+    font-size: 1.2rem;
+    margin-left: 8px;
+}
+.clear-popup-btn {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 85, 85, 0.1);
+    border: 1px solid rgba(255, 85, 85, 0.4);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ff5555;
+    font-weight: bold;
+    transition: 0.1s;
+}
+.clear-popup-btn:hover {
+    background: rgba(255, 85, 85, 0.3);
+    border-color: #ff5555;
+    transform: scale(1.1);
 }
