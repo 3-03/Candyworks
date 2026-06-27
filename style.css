@@ -63,9 +63,10 @@ body {
 
 .key-legend {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
 .legend-item {
     display: flex;
@@ -73,7 +74,7 @@ body {
     gap: 8px;
 }
 .legend-key {
-    color: #ff5555;
+    color: #fff;
     font-weight: bold;
     font-size: 1.5rem;
 }
@@ -431,9 +432,10 @@ body {
 .footer-credit {
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #888;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 .footer-credit a {
@@ -446,6 +448,12 @@ body {
 .footer-credit a:hover {
     color: #fff;
     text-shadow: 0 0 5px var(--gold);
+}
+
+.tg-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.9rem;
 }
 
 /* Mobile Optimization */
