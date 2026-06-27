@@ -391,6 +391,23 @@ document.addEventListener('DOMContentLoaded', () => {
             give[customRecipe.give - 1] = 3;
             get[customRecipe.get - 1] = 1;
             trades.push({ id: `Свой рецепт`, give, get });
+        } else if (customRecipe.give === 0 || customRecipe.get === 0) {
+            // Auto-mode: add all possible custom recipes based on what's unset
+            for (let i = 1; i <= 5; i++) {
+                for (let j = 1; j <= 5; j++) {
+                    if (i === j) continue;
+                    // If give is set, only allow that give
+                    if (customRecipe.give > 0 && customRecipe.give !== i) continue;
+                    // If get is set, only allow that get
+                    if (customRecipe.get > 0 && customRecipe.get !== j) continue;
+                    
+                    const give = [0, 0, 0, 0, 0];
+                    const get = [0, 0, 0, 0, 0];
+                    give[i - 1] = 3;
+                    get[j - 1] = 1;
+                    trades.push({ id: `Свой рецепт (Авто)`, give, get });
+                }
+            }
         }
         
         const path = findShortestPath(startState, target, trades);
